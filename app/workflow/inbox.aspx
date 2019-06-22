@@ -1,0 +1,1 @@
+<%@ Page Inherits="FP_WorkFlow.Controller.inbox,FP_WorkFlow" %>

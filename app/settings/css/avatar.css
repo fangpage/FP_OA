@@ -1,0 +1,86 @@
+﻿#avatar{
+    position: relative;
+    border:1px solid #ccc;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    width:80px;
+}
+#avatar-img{
+    width:80px;
+    height:80px;   
+
+}
+#avatar-op{
+    cursor:pointer !important;
+    width:100%;
+    text-align: center;
+    color: #fff;
+    height: 20px;
+    line-height: 20px;
+    background-color: #ccc;    
+}
+#avatar-op:hover{
+    opacity: 0.8;
+}
+#avatar-op .edit{
+    width:80px;
+    color:#fff;
+    width:80px;
+    display:block;
+    position:relative;
+    text-align: center;
+    text-decoration: none;
+}
+#avatar-op .file{
+    position:absolute;
+    left:0;
+    height: 20px;
+    overflow: hidden;
+    width:80px;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    cursor:pointer !important;
+
+}
+#avatar-op .bar {
+    background:#000; 
+    opacity: 0.5;
+}
+#user_name{
+    font-size: 20px;
+}
+#user_name table{
+    margin-bottom: 0;
+}
+#user_name th{
+    width: 0 !important;
+    display: none;
+
+}
+#user_name td{
+    background: none;
+    padding-left: 0;
+    border:none;
+}
+#user_name td a{
+    color:#000;
+}
+#user_name td .editable-click{
+    border-bottom-color: #000;
+}
+#user_name .help-block{
+    font-size: 14px;
+}
+#tipMessage{
+    position:absolute;
+    left:0;
+    top:0;
+    width:80px;
+    height:80px;
+    color:#ff0000;
+    background-color: #999;
+}

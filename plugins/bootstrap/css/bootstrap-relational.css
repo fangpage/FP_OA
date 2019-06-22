@@ -1,0 +1,7 @@
+﻿@charset "utf-8";
+.tbrelational-column {
+    text-decoration: none;
+    border-bottom: dashed 1px #08C;
+    cursor: pointer;
+    color: #08C;
+}

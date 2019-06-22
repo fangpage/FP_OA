@@ -1,0 +1,1 @@
+<%@ Page Inherits="FP_Message.Controller.msg_task,FP_Message" %>

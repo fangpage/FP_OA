@@ -1,0 +1,25 @@
+﻿@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,   
+form,fieldset,input,textarea,p,blockquote,th,td {   
+    padding: 0;   
+    margin: 0;   
+}   
+body {background-color: #2367af;}
+.login{
+	background-image: url(../../logo/login_bg.jpg);
+	background-repeat: no-repeat; width:1003px; height:585px; margin:0 auto
+}
+.login_denglu{ padding:310px 0 0 350px; width:310px; height:220px}
+
+.font_t{ font-size:20px; font-weight:bold; color:#FFFFFF; line-height:30px;}
+.font_d{ font-size:14px; line-height:25px;color:#FFFFFF; }
+input{width:230px;height:25px;border: 1px solid #0066FF;}
+
+.foot{ text-align:center}
+.foot p{font-family:Arial, Helvetica, sans-serif;line-height:20px; font-size:12px; color:#FFFFFF}
+
+
+
+
+
+

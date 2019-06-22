@@ -1,0 +1,80 @@
+﻿@charset "utf-8";
+.toolbar {
+/*    margin: 5px;
+    border:1px solid #e5e5e5;
+    padding:7px;
+    background-color: #F3F3F3;*/
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.kanban {
+    margin-top:5px;
+}
+.kanban-ul {
+    margin: 5px;
+}
+
+.kanban-ul > li {
+    float: left;
+    display: block;
+    margin: 10px 10px 0 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.kanban-ul > li:hover{
+    background-color: #F3F3F3;
+    -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);        
+    box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);  
+}
+.kanban-ul > li.selected {
+    background-color: #63ABF7;         
+}
+.kanban-card {
+    float: left;
+    position: relative;
+    border:1px solid #d7d7d7;
+    padding:4px;
+    border-radius:2px;
+    background-color:#fff;
+}
+.kanban-card .check-wrap {
+    position: absolute;
+    top: -2px !important;
+    left: -2px !important;
+    border-style: solid;
+    border-width: 22px;
+    border-color: #F3F3F3  transparent transparent #F3F3F3;
+    height: 0;
+    width: 0;
+    font-size: 0;
+    z-index: 4;
+}
+.kanban-card .check-wrap.selected {
+    border-color: #63ABF7  transparent transparent  #63ABF7;
+}
+.kanban-card .td-checkbox{
+    display: inline-block;
+    position: relative;
+    left:-20px;
+    top:-20px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    cursor: default;
+    background: 0 0 url(../img/checkbox.gif) no-repeat;
+}
+.kanban-card .td-checkbox.selected{
+    background-position: -20px 0;
+}
+.textoverflow{
+    display:inline-block;
+    white-space:nowrap;
+    word-wrap:normal;
+    word-break:break-all;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    max-width:100%;
+    _width:100%
+}

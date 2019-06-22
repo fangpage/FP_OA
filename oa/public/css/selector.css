@@ -1,0 +1,46 @@
+
+
+// 选人
+#vk_user_nav_menu li {
+    cursor: pointer;
+}
+#vk_user_dept_item tbody tr:not(.user_selected):hover{
+    background: #edf6db;
+}
+#vk_user_role_item tbody tr:not(.user_selected):hover{
+    background: #edf6db;
+}
+#vk_user_online_item tbody tr:not(.user_selected):hover{
+    background: #edf6db;
+}
+#vk_user_search_item tbody tr:not(.user_selected):hover{
+    background: #edf6db;
+}
+#vk_user_dept_item tbody tr > td{
+    border-top: 1px solid #bebebe;
+}
+#vk_user_role_item tbody tr > td{
+    border-top: 1px solid #bebebe;
+}
+#vk_user_online_item tbody tr > td{
+    border-top: 1px solid #bebebe;
+}
+#vk_user_selected_item tbody tr > td{
+    border-top: 1px solid #bebebe;
+}
+.user_selected {
+    background: #dae9bb;
+}
+#vk_user_dept_item tbody tr[item_id] td:hover {cursor: pointer}
+#vk_user_selected_item tbody tr:hover {cursor: pointer}
+#vk_user_role_item tbody tr:hover {cursor: pointer}
+#vk_user_online_item tbody tr:hover {cursor: pointer}
+#vk_user_search_item tbody tr:hover {cursor: pointer}
+
+#selectwfuser .tab-pane > div{overflow: auto;}
+#selectwfuser .nav-list.data {padding-left: 0; padding-right: 0;}
+#selectwfuser .nav-list.data .header a {font-weight: bold; background-color: #f7f7f7}
+#selectwfuser .nav-list.data a {padding: 8px; border: 1px solid #e5e5e5; text-align: center; display: block; margin: 0 0 -1px;}
+#selectwfuser .nav-list.data .active a {background-color: #dae9bb; color: black;}
+#selectwfuser .nav-list.data > li:first-child > a {-webkit-border-radius: 6px 6px 0 0;border-radius: 6px 6px 0 0;}
+#selectwfuser .nav-list.data > li:last-child > a {-webkit-border-radius: 0 0 6px 6px;border-radius: 0 0 6px 6px;}

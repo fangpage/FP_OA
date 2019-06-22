@@ -1,0 +1,1 @@
+<%@ Page Inherits="FP_Notice.Controller.count,FP_Notice" %>

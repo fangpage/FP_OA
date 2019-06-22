@@ -1,0 +1,112 @@
+﻿@charset "utf-8";
+/*
+Uploadify
+Copyright (c) 2012 Reactive Apps, Ronnie Garcia
+Released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 
+*/
+.uploadify {
+	position: relative;
+	margin-bottom: 1em;
+}
+.uploadify-button {
+	cursor: pointer;
+	background: #00b7ee;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px;
+	overflow: hidden;
+	width: 100%;
+}
+.uploadify:hover .uploadify-button {
+	background: #00a2d4;
+}
+.uploadify-button.disabled {
+	opacity: 0.6;
+	pointer-events:none;
+}
+.uploadify-queue {
+	margin-bottom: 1em;
+}
+.uploadify-queue-item {
+	background-color: #F5F5F5;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font: 11px Verdana, Geneva, sans-serif;
+	margin-top: 5px;
+	max-width: 350px;
+	padding: 10px;
+}
+.uploadify-error {
+	background-color: #FDE5DD !important;
+}
+.uploadify-queue-item .cancel a {
+	background: url('uploadify-cancel.png') 0 0 no-repeat;
+	float: right;
+	height:	16px;
+	text-indent: -9999px;
+	width: 16px;
+}
+.uploadify-queue-item.completed {
+	background-color: #E5E5E5;
+}
+.uploadify-progress {
+	background-color: #E5E5E5;
+	margin-top: 10px;
+	width: 100%;
+}
+.uploadify-progress-bar {
+	background-color: #0099FF;
+	height: 3px;
+	width: 1px;
+}
+
+/*方配自定义附件样式*/
+.attachment-wrapper {
+    display: inline-block;
+    line-height: 25px;
+    margin-right:5px;
+	width:100%;
+}
+.attachment-wrapper .dropdown:hover ul.dropdown-menu{
+    display: block;
+    margin:0;
+    padding:2px 0;
+}
+.attachment-wrapper a.dropdown-toggle {
+    padding:2px 1px;
+}
+
+.attachment-wrapper a.dropdown-toggle img {
+    width:16px;
+    height:16px;
+	vertical-align:middle;
+}
+.attachment-wrapper span.size {
+    font-style: italic;
+    font-size:10px;
+}
+.attachment-wrapper a.dropdown-toggle:hover{
+    text-decoration: none;
+    background: #0066A4;
+    color:#fff;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+.attachment-wrapper a.dropdown-toggle:after {
+    content: none;
+}
+
+/*下拉链接*/
+.dropdown-link {
+    display:inline-block;padding-left:5px;
+}
+.dropdown-link  ul.dropdown-menu {
+    margin:0;
+    left:-30px;
+}
+.dropdown-link  ul.dropdown-menu li a{
+    padding:3px 12px;
+    text-align: left;
+}

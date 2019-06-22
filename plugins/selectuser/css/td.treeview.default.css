@@ -1,0 +1,36 @@
+﻿@charset "utf-8";
+.ztree li a{height:22px;line-height:22px;}
+.ztree li a:hover {text-decoration:none;}
+.ztree li a:hover span{background-color:#0088cc;color:#fff;border-radius:2px;}
+.ztree li a span{padding:2px;}
+.ztree li a.curSelectedNode{ height:22px;line-height:22px;background-color:transparent;border:none;}
+.ztree li a.curSelectedNode span {background-color:#0088cc;color:#fff;border-radius:2px;padding:2px;}
+.ztree li span {line-height:22px; margin-right:2px; font-size:14px;}
+.ztree li span.button.chk {margin-top:3px;}
+.ztree li span.button.switch{background-image:url("../images/icons.gif");width:16px;height:16px;margin:3px 0;}
+.ztree li span.button.noline_docu{background-position:-50px -112px}
+.ztree li span.button.noline_close{background-position:-64px -96px}
+.ztree li span.button.noline_open{background-position:-34px -94px}
+.ztree li span.button.noline_open:hover{background-position:-50px -94px}
+.ztree li span.button.noline_close:hover{background-position:-80px -96px}
+.ztree li span.button.ico_open{vertical-align:middle;background:url("../images/folder_open.gif");width:16px;height:16px;padding:0;margin-bottom:3px;}
+.ztree li span.button.ico_close, .ztree li span.button.ico_docu{vertical-align:middle;background:url("../images/folder.gif");width:16px;height:16px;padding:0;margin-bottom:3px;}
+.ztree li span.button.edit {vertical-align:middle;}
+.ztree li span.button.remove {vertical-align:middle;}
+.ztreeDropDown {
+    display:none; position:absolute;
+    background-color: white;
+    overflow:auto;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.2);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    z-index: 1;
+}

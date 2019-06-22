@@ -1,0 +1,13 @@
+﻿/* 
+* @author Liupeng
+* @readme 全局通用样式，在更换主题
+* @update 2013/3/27 16:02:14
+*/
+
+/* 通用基础样式 */
+.T_icon {color:#2f8ac1 !important;}
+.T_bg a{color: #000  !important;}
+.T_bg a.btn{color: #fff  !important;}
+.T_bg .nav-list a:hover{background-color:#2f8ac1 !important;color: #fff !important;opacity:0.6  !important;filter:alpha(opacity=60)  !important;}
+.T_bg .nav-list .active a,.T_bg .nav-list .active a:hover {background-color:#2f8ac1 !important;color:#fff !important;opacity:1  !important;filter:alpha(opacity=100)  !important;}
+.T_bg .nav-list li a .badge{color:#2f8ac1 !important;}

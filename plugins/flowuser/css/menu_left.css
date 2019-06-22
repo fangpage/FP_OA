@@ -1,0 +1,91 @@
+﻿@charset "utf-8";
+*{margin: 0px; padding: 0px;}
+body {font-size:12px; background: #fff;}
+/* other */
+img {border: none; vertical-align: middle;}
+
+a:link{color: #0066cc; text-decoration: none;}
+a:visited{color: #0066cc; text-decoration: none;}
+a:hover {color: #333333; text-decoration: underline;}
+a:active{color: #0066cc; text-decoration: underline;}
+
+.head{font-size: 12pt;color: #124164;font-weight: bold;padding-left:5px;padding-top:5px;}
+
+ul {
+   list-style: none;
+   margin: 0px;
+   padding: 0px;
+   width:99%;
+   height:100%;
+   line-height:20px;
+   border-left:1px #ddd solid;
+   border-top:1px #ddd solid;
+   border-right:1px #ddd solid;
+}
+
+li a:link, li a:visited{
+   color: #444659;
+   font-size:9pt;
+   display: block;
+   text-decoration: none;
+   height: 35px;
+   border-bottom:1px #ddd solid;
+   background:#f9f9f9;
+   font-weight:bold;
+}
+
+li a:link span, li a:visited span{
+  background: url("../10/images/ar.png") no-repeat center left;
+  display:block;
+  line-height:35px;
+  padding-left:16px;
+  cursor:pointer;
+}
+li a:hover{
+   color: #000000;
+   font-weight:bold;
+   background:#f9f9f9;
+}
+/*  一级菜单 active 效果  */
+li a.active, li a:hover.active, li a:active.active, li a:visited.active{
+   background:#f9f9f9;
+}
+li a:link.active span, li a:hover.active span, li a:active.active span, li a:visited.active span{
+   color: #000000;
+   font-weight:bold;
+   background: url("../10/images/arrow_d.png") no-repeat center left;
+}
+.moduleContainer{background:#FFFFFF;overflow-x:auto;overflow-y:hidden;}
+.treeList{border-bottom:1px #5b99ca solid;padding-bottom:15px;}
+.moduleContainer .blank{line-height:30px;padding-left: 5px;}
+
+.moduleContainer .trHover{
+   border:0px;
+}
+.moduleContainer .trHover td.TableData,
+.moduleContainer .trHover .TableData td{
+   border:0px;
+   border-bottom:1px #eee solid;
+   text-align:left;
+   padding-left:16px;
+   background-image:url('../10/images/dot.png');
+   background-position: 5px center;
+   background-repeat:no-repeat;
+}
+
+.moduleContainer a:link,
+.moduleContainer a:hover,
+.moduleContainer a:active,
+.moduleContainer a:visited{
+   color: #0066cc;
+   text-decoration: none;
+   background:none;
+   display: inline;
+   font-weight:normal;
+   border:0px;
+}
+
+.moduleContainer a:hover,
+.moduleContainer a:active{
+   color: #333333;
+}
