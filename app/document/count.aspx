@@ -1,0 +1,1 @@
+<%@ Page Inherits="FP_Document.Controller.count,FP_Document" %>

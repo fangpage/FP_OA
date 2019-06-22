@@ -1,0 +1,1 @@
+<%@ Page Inherits="FP_Email.Controller.count,FP_Email" %>

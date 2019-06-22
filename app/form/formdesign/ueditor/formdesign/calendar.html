@@ -1,0 +1,140 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>日期控件</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+    <meta name="generator" content="www.leipi.org" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-ie6.css">
+    <![endif]-->
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/ie.css">
+    <![endif]-->
+    <link rel="stylesheet" href="leipi.style.css">
+    <script type="text/javascript" src="../dialogs/internal.js"></script>
+    <script type="text/javascript">
+        function createElement(type, name)
+        {     
+            var element = null;     
+            try {        
+                element = document.createElement('<'+type+' name="'+name+'">');     
+            } catch (e) {}   
+            if(element==null) {     
+                element = document.createElement(type);     
+                element.name = name;     
+            } 
+            return element;     
+        }
+    </script>
+</head>
+<body>
+<div class="content">
+    <table class="table table-bordered table-striped table-hover">
+     <tr>
+        <th><span>控件名称</span><span class="label label-important">*</span></th>
+        <th><span>默认值</span> </th>
+    </tr>
+    <tr>
+        <td><input type="text" id="orgname" placeholder="必填项"></td>
+        <td><input type="text" id="orgvalue" placeholder="无则不填"></td>
+    </tr>
+    <tr>
+        <th><span>数据类型</span> </th>
+        <th><span>对齐方式</span> </th>
+    </tr>
+    <tr>
+        <td>
+             <select id="orgtype">
+                <option value="datetime_ss">1997-01-01 12:30:20</option>
+                <option value="datetime_mm">1997-01-01 12:30</option>
+                <option value="date">1997-01-01</option>
+                <option value="date_cn">1997年1月1日</option>
+                <option value="datayear">1997</option>
+            </select>   
+        </td>
+        <td>
+            <select id="orgalign">
+                <option value="left" >左对齐</option>
+                <option value="center">居中对齐</option>
+                <option value="right">右对齐</option>
+            </select>
+        </td>
+    </tr>
+    </table>
+</div>
+<script type="text/javascript">
+var oNode = null, thePlugins = 'calendar';
+window.onload = function () {
+    if (UE.plugins[thePlugins].editdom) {
+        oNode = UE.plugins[thePlugins].editdom;
+        var gValue = oNode.getAttribute('value').replace(/&quot;/g, "\""), gTitle = oNode.getAttribute('title').replace(/&quot;/g, "\""), gAlign = oNode.getAttribute('orgalign'), gType = oNode.getAttribute('orgtype');
+        gValue = gValue == null ? '' : gValue;
+        gTitle = gTitle == null ? '' : gTitle;
+        $G('orgvalue').value = gValue;
+        $G('orgname').value = gTitle;
+        $G('orgalign').value = gAlign;
+        $G('orgtype').value = gType;
+    }
+};
+dialog.oncancel = function () {
+    if( UE.plugins[thePlugins].editdom ) {
+        delete UE.plugins[thePlugins].editdom;
+    }
+};
+dialog.onok = function (){
+    if($G('orgname').value==''){
+        alert('请输入控件名称');
+        return false;
+    }
+    var gValue=$G('orgvalue').value.replace(/\"/g,"&quot;"),gTitle=$G('orgname').value.replace(/\"/g,"&quot;"),gAlign=$G('orgalign').value,gType=$G('orgtype').value;
+    
+    if( !oNode ) {
+        try {
+            oNode = createElement('input','leipiNewField');
+            oNode.setAttribute('type', 'text');
+            oNode.setAttribute('readonly', 'readonly');
+            oNode.setAttribute('onfocus', "WdatePicker({dateFmt:'yyyy-MM-dd'})");
+            oNode.setAttribute('class', 'Wdate');
+            oNode.setAttribute('title',gTitle);
+            oNode.setAttribute('value',gValue);
+            oNode.setAttribute('name', gTitle);
+            oNode.setAttribute('leipiPlugins',thePlugins);
+            if( gAlign != '' ) {
+                oNode.style.textAlign = gAlign;
+                oNode.setAttribute('orgalign',gAlign );
+            }
+            if( gType != '' ) {
+                oNode.setAttribute('orgtype',gType );
+            }
+            editor.execCommand('insertHtml',oNode.outerHTML);
+        } catch (e) {
+            try {
+                editor.execCommand('error');
+            } catch ( e ) {
+                alert('控件异常，请到官网反馈或寻求帮助！');
+            }
+            return false;
+        }
+    } else {      
+        oNode.setAttribute('title', gTitle);
+        oNode.setAttribute('name', gTitle);
+        oNode.setAttribute('value', $G('orgvalue').value);
+        if( gAlign != '' ) {
+            oNode.style.textAlign = gAlign;
+            oNode.setAttribute('orgalign',gAlign );
+        }else{
+            oNode.setAttribute('orgalign', '');
+        }
+        if( gType != '' ) {
+            oNode.setAttribute('orgtype',gType );
+        }else{
+            oNode.setAttribute('orgtype', '');
+        }
+        delete UE.plugins[thePlugins].editdom;
+    }
+};
+</script>
+</body>
+</html>

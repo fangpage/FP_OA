@@ -1,0 +1,1 @@
+<%@ Page Inherits="FP_Email.Controller.board,FP_Email" %>

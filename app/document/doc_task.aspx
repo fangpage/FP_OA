@@ -1,0 +1,1 @@
+<%@ Page Inherits="FP_Document.Controller.doc_task,FP_Document" %>
